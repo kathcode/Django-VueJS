@@ -3,7 +3,10 @@ from django.conf.urls import patterns, url
 from books_cbv import views
 
 urlpatterns = patterns('',
-  url(r'^$', views.home, name='home'),
+  url(r'^ad', views.home, name='home'),
+  url(r'^cl', views.home2, name='home2'),
+  # Login
+  url(r'^$', views.login, name='login'),
   # Cliente
   url(r'^clients', views.moduleClientes, name='moduleClientes'),
   url(r'^list$', views.ClienteList.as_view(), name='book_list'),

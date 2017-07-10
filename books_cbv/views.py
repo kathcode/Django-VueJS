@@ -7,8 +7,14 @@ from django.template import RequestContext
 
 from books_cbv.models import Cliente, Animal, Cita, Historia
 
+def login(request):
+    return render_to_response('books_cbv/login.html', {}, RequestContext(request))
+
 def home(request):
     return render_to_response('books_cbv/menu.html', {}, RequestContext(request))
+
+def home2(request):
+    return render_to_response('books_cbv/menu2.html', {}, RequestContext(request))
 
 def moduleClientes(request):
     return render_to_response('books_cbv/cliente.html', {}, RequestContext(request))
@@ -84,13 +90,13 @@ class HistoriaList(ListView):
     
 class HistoriaCreate(CreateView):
     model = Historia
-    fields = ['id_historia', 'id_animal', 'descripcion', 'fecha_creacion']
+    fields = ['id_historia', 'id_animal', 'name', 'descripcion', 'fecha_creacion']
 
     success_url = reverse_lazy('books_cbv:book_list_historia')
 
 class HistoriaUpdate(UpdateView):
     model = Historia
-    fields = ['id_historia', 'id_animal', 'descripcion', 'fecha_creacion']
+    fields = ['id_historia', 'id_animal', 'name', 'descripcion', 'fecha_creacion']
 
     success_url = reverse_lazy('books_cbv:book_list_historia')
 

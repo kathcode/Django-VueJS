@@ -8,5 +8,5 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^books_cbv/', include('books_cbv.urls', namespace='books_cbv')),
-    url(r'^$', 'apps.views.home'),
+    url(r'^$', 'apps.views.login'),
 ]

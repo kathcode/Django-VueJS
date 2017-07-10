@@ -5,3 +5,6 @@ from django.template import RequestContext
 
 def home(request):
     return render_to_response('books_cbv/menu.html', {}, RequestContext(request))
+
+def login(request):
+    return render_to_response('books_cbv/login.html', {}, RequestContext(request))

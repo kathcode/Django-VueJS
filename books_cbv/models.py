@@ -48,6 +48,7 @@ class Cita(models.Model):
 class Historia(models.Model):
     id_historia = models.IntegerField()
     id_animal = models.IntegerField()
+    name = models.CharField(max_length=500, default='name')
     descripcion = models.CharField(max_length=500)
     fecha_creacion = models.CharField(max_length=200, default=datetime.datetime.now())
 
