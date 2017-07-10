@@ -1,0 +1,40 @@
+{% extends "books_cbv/base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 header">
+        <div class="text-center">
+          <img src="{% static 'books_cbv/images/logo.png' %}" alt="" class="img-responsive logo"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        Edicion de animales
+      </div>
+      <div>&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <form method="post">
+          {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+              <input class="button-mp form-btn" type="submit" value="Guardar" />
+            </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <a href="{% url 'books_cbv:book_list_animal' %}" class="button-mp links">Lista de animales</a>
+        <a href="{% url 'books_cbv:home' %}" class="button-mp links">Menu</a><br>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

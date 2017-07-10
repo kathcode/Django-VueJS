@@ -1,0 +1,26 @@
+{% extends "books_cbv/base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 header">
+        <div class="text-center">
+          <img src="{% static 'books_cbv/images/petsin-a-row.png' %}" alt="" class="img-responsive"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="title">MY PET</div>
+        <a href="/books_cbv/clients" class="button-mp links">CLientes</a>
+        <a href="/books_cbv/animal" class="button-mp links">Mascotas</a>
+        <a href="/books_cbv/cita" class="button-mp links">Citas</a><br>
+        <a href="/books_cbv/historia" class="button-mp links">Historias clínicas</a><br>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock content %}

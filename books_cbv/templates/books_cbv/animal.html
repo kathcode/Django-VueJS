@@ -1,0 +1,29 @@
+{% extends "books_cbv/base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 header">
+        <div class="text-center">
+          <img src="{% static 'books_cbv/images/logo.png' %}" alt="" class="img-responsive logo"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        Mascotas
+      </div>
+      <div>&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <a href="{% url 'books_cbv:book_new_animal' %}" class="button-mp links">Crear mascota</a>
+        <a href="{% url 'books_cbv:book_list_animal' %}" class="button-mp links">Listado</a>
+        <a href="{% url 'books_cbv:home' %}" class="button-mp links">Menu home</a><br>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Project</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'books_cbv/bootstrap/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'books_cbv/css/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'books_cbv/css/bootstrap-datepicker3.min.css' %}" />
+        <script src="{% static 'books_cbv/js/jquery-3.1.1.min.js' %}"></script>
+        <script src="{% static 'books_cbv/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'books_cbv/js/bootstrap-datepicker.min.js' %}"></script>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+    </head>
+
+    <body>
+    {% block content %}{% endblock content %}
+    <script type="text/javascript">
+      $('.datepicker').datepicker();
+    </script>
+    </body>
+</html>
