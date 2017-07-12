@@ -31,4 +31,5 @@ urlpatterns = patterns('',
   url(r'^new/historia$', views.HistoriaCreate.as_view(), name='book_new_historia'),
   url(r'^edit/historia(?P<pk>\d+)$', views.HistoriaUpdate.as_view(), name='book_edit_historia'),
   url(r'^delete/historia(?P<pk>\d+)$', views.HistoriaDelete.as_view(), name='book_delete_historia'),
+  url(r'^test', views.test, name='test'),
 )

@@ -4,6 +4,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 
 from books_cbv.models import Cliente, Animal, Cita, Historia
 
@@ -27,6 +29,21 @@ def moduleAnimal(request):
 
 def moduleHistoria(request):
     return  render_to_response('books_cbv/historia.html', {}, RequestContext(request))
+
+@api_view(['GET'])
+def test(request):
+    data = []
+    animal = Animal.objects.all();
+    for animal in Animal.objects.all():
+        data.append({
+            'name': animal.name,
+            'color': animal.color,
+            'fecha_nacim': animal.fecha_nacim,
+            'id': animal.id,
+            'id_cliente': animal.id_cliente
+        })
+
+    return Response(data)
 
 class ClienteList(ListView):
     model = Cliente

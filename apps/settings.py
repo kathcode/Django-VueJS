@@ -37,8 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'books_cbv',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
