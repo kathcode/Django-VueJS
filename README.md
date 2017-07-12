@@ -38,3 +38,4 @@ need to create a user to test it, you can create a user using the following comm
 
 To create a normal user (non super user), you must login to the admin page and
 create it: <http://localhost:8000/admin/>
+
