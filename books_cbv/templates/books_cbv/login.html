@@ -13,13 +13,22 @@
 
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center">
-        <div class="form-group form-login">
-          <input type="text" class="form-control input-login" required placeholder="Usuario">
-          <input type="password" class="form-control input-login" required placeholder="Contraseña">
-
-          <a href="{% url 'books_cbv:home' %}" class="button-mp links">Administrador</a>
-          <a href="{% url 'books_cbv:home2' %}" class="button-mp links">Cliente</a><br>
-        </div>
+        <form name="myForm" onsubmit="return validateForm()">
+          <div class="form-group form-login">
+            <input type="text" class="form-control input-login" required placeholder="Usuario" id="usuario">
+            <input type="password" class="form-control input-login" required placeholder="Contraseña" id="password">
+            <button class="button-mp links" onclick="urlStartLogin='admin'" type="submit">Administrador</button>
+            <button class="button-mp links" onclick="urlStartLogin='cliente'" type="submit">Cliente</button>
+            
+            <a id="btnAdmin" href="{% url 'books_cbv:home' %}" 
+              class="button-mp links hide-button"
+              type="submit">
+              Administrador</a>
+            <a id="btnCliente" href="{% url 'books_cbv:home2' %}" 
+               class="button-mp links hide-button"
+               type="submit">Cliente</a>
+          </div>
+        </form>
       </div>
     </div>
   </div>

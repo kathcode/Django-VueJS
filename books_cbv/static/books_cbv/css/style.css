@@ -28,10 +28,6 @@ body {
   margin-bottom: 0px!important;
 }
 
-.salir {
-  
-}
-
 .logo {
   padding: 10px;
 }
@@ -41,6 +37,7 @@ body {
 }
 
 .button-mp {
+  border: 0px;
   width: 200px;
   font-size: 1.5em;
   text-transform: uppercase !important;
@@ -79,6 +76,10 @@ body {
   border: 1px solid #ccc8c8;
   padding: 5px 15px;
   margin-bottom: 3px
+}
+
+form {
+  border: none!important;
 }
 
 input {
@@ -136,7 +137,7 @@ form {
 .form-login > a {
   font-size: 1em;
   width: 125px;
-  display: inline-block!important;
+  display: inline-block;
   margin-top: 40px;
 }
 .input-login {
@@ -146,4 +147,8 @@ form {
   box-shadow: none;
   border-radius: 0px;
   margin-bottom: 10px;
+}
+
+.hide-button {
+  display: none!important;
 }
