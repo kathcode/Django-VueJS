@@ -4,7 +4,7 @@ from books_cbv import views
 
 urlpatterns = patterns('',
   url(r'^ad', views.home, name='home'),
-  url(r'^cl', views.home2, name='home2'),
+  url(r'^cl$', views.home2, name='home2'),
   # Login
   url(r'^$', views.login, name='login'),
   # Cliente

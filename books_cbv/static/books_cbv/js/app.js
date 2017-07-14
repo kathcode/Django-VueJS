@@ -29,3 +29,9 @@ var dataAnimal = getAnimals().then(function(response) {
 });
 
 /* Animales */
+var app = new Vue({
+  el: '#animangelito',
+  data: {
+    message: 'Hello Vue!'
+  }
+})

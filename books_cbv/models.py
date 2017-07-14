@@ -35,7 +35,7 @@ class Animal(models.Model):
 class Cita(models.Model):
     id_animal = models.IntegerField()
     name = models.CharField(max_length=500)
-    fecha_cita = models.DateField(auto_now=False, auto_now_add=False)
+    fecha_cita = models.DateField(auto_now=False, auto_now_add=False, default=datetime.date.today() + datetime.timedelta(days=1))
     descripcion = models.CharField(max_length=500)
     fecha_creacion = models.CharField(max_length=200, default=datetime.datetime.now())
 
