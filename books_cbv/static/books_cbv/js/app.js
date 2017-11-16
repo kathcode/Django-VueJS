@@ -1,4 +1,3 @@
-
 /*
  * Validate the form to login
  */
@@ -21,17 +20,23 @@ function validateForm() {
   return false;
 }
 
-function getAnimals() {
-  return axios.get('/books_cbv/test');
-}
-var dataAnimal = getAnimals().then(function(response) {
-    console.log(response.data);
-});
-
 /* Animales */
-var app = new Vue({
-  el: '#animangelito',
+var moduleAnimalView = new Vue({
+  el: '#animalList',
   data: {
-    message: 'Hello Vue!'
+    animals: []
+  },
+  methods: {
+    mounted: function() {
+      debugger
+      axios.get(`/books_cbv/test`)
+      .then(response => {
+        debugger
+        this.animals = response.data
+      })
+      .catch(e => {
+        this.errors.push(e)
+      })
+    }
   }
 })

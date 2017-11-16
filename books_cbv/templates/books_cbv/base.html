@@ -18,22 +18,8 @@
 
     <body>
         {% block content %}{% endblock content %}
-        
-        <!--a href="{% url 'books_cbv:login' %}" class="button-mp links salir">Salir</a-->
-        <div id="app">
-            hola ${ message }
-        </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
-        <script type="text/javascript">
-            var app = new Vue({
-            el: '#app',
-            delimiters: ['${', '}'],
-            data: {
-                message: 'Hello Vue!',
-            }
-            })
-        </script>
         <script src="{% static 'books_cbv/js/app.js' %}"></script>
     </body>
 </html>

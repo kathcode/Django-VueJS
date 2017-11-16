@@ -16,6 +16,7 @@ urlpatterns = patterns('',
   # Animal
   url(r'^animal', views.moduleAnimal, name='moduleAnimal'),
   url(r'^list1$', views.AnimalList.as_view(), name='book_list_animal'),
+  url(r'^view/animal/(?P<pk>\d+)$', views.AnimalView, name='AnimalView'),
   url(r'^new/animal$', views.AnimalCreate.as_view(), name='book_new_animal'),
   url(r'^edit/animal(?P<pk>\d+)$', views.AnimalUpdate.as_view(), name='book_edit_animal'),
   url(r'^delete/animal(?P<pk>\d+)$', views.AnimalDelete.as_view(), name='book_delete_animal'),

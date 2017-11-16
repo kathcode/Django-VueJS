@@ -64,6 +64,9 @@ class ClienteDelete(DeleteView):
     success_url = reverse_lazy('books_cbv:book_list')
 
 # Animal
+def AnimalView(request):
+    return render_to_response('books_cbv/animal-view.html', {}, RequestContext(request))
+
 class AnimalList(ListView):
     model = Animal
 
